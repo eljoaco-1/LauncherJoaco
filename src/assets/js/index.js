@@ -17,9 +17,9 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Salut ! 👋", "author": "Fefe_du_973" },
-            { "message": "Salut je suis du code. 👨‍💻", "author": "Fefe_du_973" },
-            { "message": "Visite mon site pour + d'infos 🌐", "author": "Fefe_du_973" }
+            { "message": "Saludos! 👋", "author": "Eljoaco__" },
+            { "message": "Bienvenido a mi launcher. 👨‍💻", "author": "Eljoaco__" },
+            { "message": "Todo es automatico. 🌐", "author": "Eljoaco__" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -44,16 +44,16 @@ class Splash {
             else this.checkUpdate();
         }).catch(e => {
             console.error(e);
-            return this.shutdown("Aucune connexion internet détectée 🌐,<br>veuillez réessayer ultérieurement.");
+            return this.shutdown("Sin conexión a Internet detectada 🌐,<br>Vuelva a intentarlo más tarde.");
         })
     }
 
     async checkUpdate() {
-        this.setStatus(`Recherche de mise à jour... 🔄️`);
+        this.setStatus(`Búsqueda de actualizaciones ... 🔄️`);
         ipcRenderer.send('update-app');
 
         ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(`Mise à jour disponible ! ✅`);
+            this.setStatus(`Actualización disponible!✅`);
             this.toggleProgress();
         })
 
@@ -74,10 +74,10 @@ class Splash {
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Arrêt dans 5s ❌`);
+        this.setStatus(`${text}<br>Deteniendo en 5s ❌`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Arrêt dans ${i--}s ❌`);
+            this.setStatus(`${text}<br>Deteniendo en ${i--}s ❌`);
             if (i < 0) ipcRenderer.send('update-window-close');
         }, 1000);
     }
