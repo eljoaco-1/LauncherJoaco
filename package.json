@@ -1,7 +1,7 @@
 {
     "name": "joaco-launcher",
     "preductname": "Joaco Launcher",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Launcher minecraft custom por Eljoaco__",
     "main": "src/app.js",
     "author": "Autor principal : Eljoaco__",
