@@ -1,11 +1,11 @@
 {
     "name": "joaco-launcher",
     "preductname": "Joaco Launcher",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Launcher minecraft custom por Eljoaco__",
     "main": "src/app.js",
     "author": "Autor principal : Eljoaco__",
-    "url": "http://192.168.0.105:80/launcher_backend",
+    "url": "http://201.213.162.130:80/launcher_backend",
     "engines": {
         "node": "16.x.x"
     },

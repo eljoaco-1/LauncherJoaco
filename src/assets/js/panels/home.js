@@ -80,7 +80,7 @@ class Home {
                 </div>
                 <div class="news-content">
                     <div class="bbWrapper">
-                        <p>Impossible de contacter le serveur des news.</br>Merci de vérifier votre configuration.</p>
+                        <p>No se puede contactar al servidor de noticias.</br>Verifique su configuración.</p>
                     </div>
                 </div>`
             // news.appendChild(blockNews);
@@ -161,7 +161,7 @@ class Home {
 
             launch.on('progress', (progress, size) => {
                 progressBar.style.display = "block"
-                document.querySelector(".text-download").innerHTML = `Téléchargement ${((progress / size) * 100).toFixed(0)}%`
+                document.querySelector(".text-download").innerHTML = `Descargando ${((progress / size) * 100).toFixed(0)}%`
                 ipcRenderer.send('main-window-progress', { progress, size })
                 info.style.width = "200px"
                 progressBar.value = progress;
@@ -191,7 +191,7 @@ class Home {
 
             launch.on('patch', patch => {
                 console.log(patch);
-                info.innerHTML = `Patch en cours...`
+                info.innerHTML = `Verificando en progreso...`
             });
 
             launch.on('data', (e) => {
@@ -199,7 +199,7 @@ class Home {
                 if (launcherSettings.launcher.close === 'close-launcher') ipcRenderer.send("main-window-hide");
                 ipcRenderer.send('main-window-progress-reset')
                 progressBar.style.display = "none"
-                info.innerHTML = `Demarrage en cours...`
+                info.innerHTML = `Iniciando en progreso...`
                 info.style.width = "200px"
                 console.log(e);
             });
@@ -210,7 +210,7 @@ class Home {
                 info.style.display = "none"
                 playBtn.style.display = "block"
                 info.style.width = "140px"
-                info.innerHTML = `Vérification <img style="width:28px;float:right;vertical-align: middle;" src="assets/images/background/492329d446c422b0483677d0318ab4fa.gif">`
+                info.innerHTML = `Verificando <img style="width:28px;float:right;vertical-align: middle;" src="assets/images/background/492329d446c422b0483677d0318ab4fa.gif">`
                 new logger('Launcher', '#7289da');
                 
                 console.log('Close');

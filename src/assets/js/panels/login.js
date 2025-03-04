@@ -114,11 +114,11 @@ class Login {
             loginBtn.disabled = true;
             mailInput.disabled = true;
             passwordInput.disabled = true;
-            infoLogin.innerHTML = "Connexion en cours...";
+            infoLogin.innerHTML = "Conexión en progreso...";
 
 
             if (mailInput.value == "") {
-                infoLogin.innerHTML = "Entrez votre adresse email / Nom d'utilisateur"
+                infoLogin.innerHTML = "Ingrese su dirección email / Nombre de usuario"
                 cancelMojangBtn.disabled = false;
                 loginBtn.disabled = false;
                 mailInput.disabled = false;
@@ -127,7 +127,7 @@ class Login {
             }
 
             if (passwordInput.value == "") {
-                infoLogin.innerHTML = "Entrez votre mot de passe"
+                infoLogin.innerHTML = "Ingrese su contraseña"
                 cancelMojangBtn.disabled = false;
                 loginBtn.disabled = false;
                 mailInput.disabled = false;
@@ -143,7 +143,7 @@ class Login {
                 loginBtn.disabled = false;
                 mailInput.disabled = false;
                 passwordInput.disabled = false;
-                infoLogin.innerHTML = 'Adresse E-mail ou mot de passe invalide'
+                infoLogin.innerHTML = 'Dirección E-mail o contraseña no válida'
                 return
             }
 
