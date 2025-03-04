@@ -137,7 +137,7 @@ class Skin {
                 // Create the span element
                 var span = document.createElement("span");
                 span.setAttribute("class", "input-text");
-                span.textContent = "Ajoutrer des skins";
+                span.textContent = "Agregar skins";
 
                 // Create the input element
                 var input = document.createElement("input");
