@@ -49,7 +49,7 @@ class Splash {
     }
 
     async checkUpdate() {
-        this.setStatus(`Búsqueda de actualizaciones ... 🔄️`);
+        this.setStatus(`Buscando actualizaciones ... 🔄️`);
         ipcRenderer.send('update-app');
 
         ipcRenderer.on('updateAvailable', () => {
